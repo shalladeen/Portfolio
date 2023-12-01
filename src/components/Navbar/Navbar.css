@@ -12,8 +12,13 @@
     background-color: var(--accent);
     padding: 20px;
     width: 100%;
-    position: fixed;
+    height: 100px;
     top: 0;
+  }
+
+  .header-bg {
+    background-color: var(--accent);
+    transition: 0.5s;
   }
 
   a {
@@ -27,7 +32,8 @@
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 0;
+    padding-top: 20px;
+    
   }
   
   li {

@@ -1,0 +1,70 @@
+:root{
+    --background-color: #fffbf8;
+    --main-text: #000000;
+    --accent: #1697c5;
+    --background-color-dark: #0f1311;
+    --main-text-dark: #f3eeee;
+    --accent-dark: #50c2ec ;
+    box-sizing: border-box;
+  }
+
+.card-heading {
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+}
+
+.project-container {
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding-bottom: 5rem;
+}
+
+.project-card{
+    background: var(--accent);
+    padding: 1.2rem 1rem;
+}
+
+.project-card img {
+    width: 100%;
+}
+
+.project-title {
+    color: var(--main-text);
+    padding: 1rem 0;
+}
+
+.pro-details p {
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.pro-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.card-btn {
+    display: black;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: var(--main-text);
+}
+
+.pro-btns .card-btn {
+    padding: 0.5rem 1rem;
+}
+
+
+@media screen and (max-width: 740px) {
+    .project-container {
+        max-width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+}
+

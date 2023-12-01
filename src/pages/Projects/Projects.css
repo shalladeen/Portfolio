@@ -1,21 +1,15 @@
-.Home {
+
+.Projects {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     background-color: var(--background-color);
-    padding-top: 96px;
   }
   
-  .greeting{
+  .project-heading{
     padding-bottom: 250px;
-    font-size: 60px;
+    font-size: 40px;
     
   }
-  
-  .name{
-    color: var(--accent);
-  }
-
-  
