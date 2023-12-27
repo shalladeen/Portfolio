@@ -9,6 +9,8 @@
   }
 
 .header {
+    display: flex;
+    justify-content: space-between;
     background-color: var(--accent);
     padding: 20px;
     width: 100%;
@@ -25,6 +27,7 @@
     text-decoration: none;
     color: var(--background-color);
   }
+
   ul {
     color: var(--background-color);
     font-size: 25px;
@@ -57,3 +60,28 @@
     opacity: 1;
     width: 100%;
   }
+
+  .socials {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    
+  }
+
+  .social-icon{
+    margin-left: 15px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 100px;
+  }
+
+  .social-icon:hover svg {
+    color: black; 
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+ 

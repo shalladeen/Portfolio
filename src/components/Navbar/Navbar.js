@@ -2,6 +2,7 @@ import "./Navbar.css";
 
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
         }
     };
 
-    window.addEventListener("scrol", changeColor);
+    //window.addEventListener("scrol", changeColor);
 
   return (
     <div className={color ? "header header-bg" : "header"}>
@@ -33,7 +34,17 @@ const Navbar = () => {
             <li>
                 <Link to="/contact">Contact</Link>
             </li>
+
         </ul>
+
+        <div className="socials">
+            <div className="social-icon"> 
+                <FaLinkedin />
+            </div>
+             <div className="social-icon">
+                <FaGithub />
+            </div>
+        </div>
        
     </div>
   )

@@ -4,12 +4,12 @@ import "@fontsource/comfortaa";
 import Homepage from './Homepage';
 import Navbar from '../../components/Navbar/Navbar';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import Footer from '../../components/Navbar/Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 
 
 const Home = () => {
   return (
-    <div className = "Home">
+    <div className = "Home-Content">
       <Navbar/>
       <Homepage/>
       <ProjectCard/>

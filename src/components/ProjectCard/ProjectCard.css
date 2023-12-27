@@ -15,16 +15,18 @@
 
 .project-container {
     max-width: 1140px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    padding-bottom: 5rem;
+    
 }
 
 .project-card{
     background: var(--accent);
     padding: 1.2rem 1rem;
+    max-width: 400px;
+    
 }
 
 .project-card img {
