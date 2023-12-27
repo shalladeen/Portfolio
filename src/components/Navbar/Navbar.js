@@ -38,14 +38,13 @@ const Navbar = () => {
         </ul>
 
         <div className="socials">
-            <div className="social-icon"> 
-                <FaLinkedin />
-            </div>
-             <div className="social-icon">
-                <FaGithub />
-            </div>
+            <a href="https://www.linkedin.com/in/shawna-halladeen-6414a8288/" target="_blank" rel="noopener noreferrer" className="social-icon">
+             <FaLinkedin />
+            </a>
+            <a href="https://github.com/shalladeen" target="_blank" rel="noopener noreferrer" className="social-icon">
+             <FaGithub />
+            </a>
         </div>
-       
     </div>
   )
 }
