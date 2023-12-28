@@ -3,8 +3,11 @@ import './Home.css'
 import "@fontsource/comfortaa";
 import Homepage from './Homepage';
 import Navbar from '../../components/Navbar/Navbar';
-import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import Projects from '../Projects/Projects';
 import Footer from '../../components/Footer/Footer';
+
 
 
 const Home = () => {
@@ -13,7 +16,13 @@ const Home = () => {
       <Navbar/>
       <Homepage/>
       <div id="projects-section">
-       <ProjectCard/>
+        <Projects/>
+      </div>
+      <div id="about-section">
+        <About/>
+      </div>
+      <div id="contact-section">
+        <Contact/>
       </div>
       <Footer/>
     </div>

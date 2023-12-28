@@ -1,15 +1,15 @@
+.project-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
 
-.Projects {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    background-color: var(--background-color);
-  }
-  
-  .project-heading{
-    padding-bottom: 250px;
-    font-size: 40px;
-    
-  }
+.project-heading {
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+

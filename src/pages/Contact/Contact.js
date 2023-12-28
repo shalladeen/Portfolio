@@ -1,17 +1,15 @@
-import React from 'react'
-
-import Navbar from '../../components/Navbar/Navbar';
-import ProjectPage from '../Projects/ProjectPage';
-import Footer from '../../components/Footer/Footer';
+import React from 'react';
+import './Contact.css';
 
 const Contact = () => {
   return (
-    <div>
-      <Navbar/>
-      <ProjectPage heading="CONTACT" text="Let's chat"/>
-      <Footer/>
-</div>
-  )
-}
+    <div className="contact-body">
+      <div className="contact-heading">
+        <h1>CONTACT</h1>
+        <p>Let's chat</p> 
+        </div>
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;

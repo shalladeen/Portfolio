@@ -1,5 +1,3 @@
-import './Projects.css';
-
 import React, { Component } from 'react'
 
 class ProjectPage extends Component  {

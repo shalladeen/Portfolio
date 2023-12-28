@@ -1,5 +1,5 @@
-
-.about-body {
+/* Contact.css */
+.contact-body {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     background-color: var(--background-color); 
   }
   
-  .about-heading {
+  .contact-heading {
     padding-bottom: 20px;
     font-size: 40px;
   }

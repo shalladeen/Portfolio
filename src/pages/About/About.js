@@ -1,18 +1,15 @@
-import React from 'react'
+import React from 'react';
 import './About.css';
-
-import Navbar from '../../components/Navbar/Navbar';
-import ProjectPage from '../Projects/ProjectPage';
-import Footer from '../../components/Footer/Footer';
 
 const About = () => {
   return (
-    <div>
-      <Navbar/>
-      <ProjectPage heading="ABOUT" text="I'm a Software Engineering Student" />
-      <Footer/>
-</div>
-  )
-}
+    <div className="about-body">
+      <div className="about-heading">
+        <h1>ABOUT</h1>
+        <p>I'm a Software Engineering Student</p>
+        </div>
+    </div>
+  );
+};
 
-export default About
+export default About;

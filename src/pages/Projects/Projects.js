@@ -1,17 +1,15 @@
 import React from 'react'
-
 import ProjectPage from './ProjectPage';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
+import './Projects.css'
 
 const Projects = () => {
   return (
-    <div>
-        <Navbar/>
+    <div className="project-body">
         <ProjectPage heading="PROJECTS." text="Some of my recent stuff"/>
-        <ProjectCard/>
-        <Footer/>
+        <div className="project-cards-container">
+          <ProjectCard/>
+          </div>
     </div>
   )
 }
