@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import test from '../../images/test1.svg';
-import { FaArrowDown } from 'react-icons/fa'
+import { FaAngleDown } from 'react-icons/fa'
 
 
 const Homepage = () => {
@@ -19,7 +19,7 @@ const Homepage = () => {
       <p className="greeting">Hi there, <strong className="name">I'm Shawna!</strong></p>
       <p className="home-desc">I am a Software Engineering Student</p>
       <button className="projects-button" onClick={scrollToProjects}>
-          My Projects <FaArrowDown />
+          My Projects <FaAngleDown />
         </button>
       </div>
       <img src={test}/>

@@ -2,44 +2,42 @@ import React from 'react'
 import './ProjectCard.css';
 import logo192 from '../ProjectCard/logo192.png';
 import { NavLink } from 'react-router-dom';
-import { FiExternalLink } from 'react-icons/fi';
+import { FiGithub } from "react-icons/fi";
 
 const ProjectCard = () => {
   return (
     <div className="full-project-container">
       <div className="project-container">
 
-        <div className="project-card">
+        <NavLink to="https://github.com/shalladeen/portfolio" target="_blank" className="project-card">
           <img src={logo192} alt="image" />
           <div className="detail-container">
             <h2 className="project-title">Project Title</h2>
-          <div className="pro-details">
-            <p>This will be the description for the project</p>
-          
-            <div className="pro-btns">
-              <NavLink to="url.com" className="card-btn">View</NavLink>
-              <a href="source-url.com" target="_blank" rel="noopener noreferrer" className="source-btn">
-                <FiExternalLink /></a>
+            <div className="pro-details">
+              <p>This will be the description for the project</p>
+              <div className="pro-btns">
+                <a href="https://github.com/shalladeen/portfolio" target="_blank" rel="noopener noreferrer" className="source-btn">
+                  <FiGithub />
+                </a>
             </div>
             </div>
           </div>
-        </div>
-
-        <div className="project-card">
+          </NavLink>
+        
+          <NavLink to="https://github.com/shalladeen/portfolio" target="_blank" className="project-card">
           <img src={logo192} alt="image" />
           <div className="detail-container">
-            <h2 className="project-title">Project Title</h2>
-          <div className="pro-details">
-            <p>This will be the description for the project</p>
-          
-            <div className="pro-btns">
-              <NavLink to="url.com" className="card-btn">View</NavLink>
-              <a href="source-url.com" target="_blank" rel="noopener noreferrer" className="source-btn">
-                <FiExternalLink /></a>
+            <h2 className="project-title">Project Title 2</h2>
+            <div className="pro-details">
+              <p>This will be the description for the project</p>
+              <div className="pro-btns">
+                <a href="https://github.com/shalladeen/portfolio" target="_blank" rel="noopener noreferrer" className="source-btn">
+                  <FiGithub />
+                </a>
             </div>
             </div>
           </div>
-        </div>
+          </NavLink>
 
       </div>
     </div>
