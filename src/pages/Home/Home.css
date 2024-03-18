@@ -83,4 +83,52 @@
     }
   }
 
+
+
+  .svg-container {
+    position: relative;
+    left: -30%;
+    width: 400px; 
+    height: 400px;
+  }
   
+  .blob-svg, .me-Portfolio-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: auto;
+  }
+ 
+
+  .me-Portfolio-clip {
+    clip-path: circle(111% at 30%); 
+    position: absolute;
+    top: 26%;
+    margin-left: 14%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    height: auto;
+    z-index: 1; 
+  }
+  
+  
+  .blob-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: auto;
+    z-index: 0; 
+    transform: rotate(-167deg);
+  }
+  
+  @keyframes pulseBlob {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05) skewX(5deg); 
+    }
+  }
