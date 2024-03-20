@@ -1,5 +1,4 @@
 import React from 'react'
-import './Home.css'
 import "@fontsource/comfortaa";
 import Homepage from './Homepage';
 import Navbar from '../../components/Navbar/Navbar';
