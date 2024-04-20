@@ -1,47 +1,57 @@
-import React from 'react'
-import './ProjectCard.css';
-import logo192 from '../ProjectCard/logo192.png';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { Box, Image, Heading, Text, Link, SimpleGrid, VStack, Icon, IconButton, Container} from '@chakra-ui/react';
 import { FiGithub } from "react-icons/fi";
+import pixelSnake from './pixel-snake.jpg';
+import logo192 from './logo192.png';
+
+// Project data array
+const projects = [
+  {
+    id: 1,
+    title: "Nibble Noodle",
+    description: "A simple pixel snake game built with Javascript, HTML, and CSS",
+    projectUrl: "https://nibblenoodle.netlify.app",
+    imageUrl: pixelSnake,
+    githubUrl: "https://github.com/shalladeen/Nibble-Noodle?tab=readme-ov-file"
+  },
+  {
+    id: 2,
+    title: "Project Title 2",
+    description: "This will be the description for the second project",
+    imageUrl: logo192,
+    githubUrl: "https://github.com/your_github/project2" 
+  }
+];
 
 const ProjectCard = () => {
   return (
-    <div className="full-project-container">
-      <div className="project-container">
-
-        <NavLink to="https://github.com/shalladeen/portfolio" target="_blank" className="project-card">
-          <img src={logo192} alt="image" />
-          <div className="detail-container">
-            <h2 className="project-title">Project Title</h2>
-            <div className="pro-details">
-              <p>This will be the description for the project</p>
-              <div className="pro-btns">
-                <a href="https://github.com/shalladeen/portfolio" target="_blank" rel="noopener noreferrer" className="source-btn">
-                  <FiGithub />
-                </a>
-            </div>
-            </div>
-          </div>
-          </NavLink>
-        
-          <NavLink to="https://github.com/shalladeen/portfolio" target="_blank" className="project-card">
-          <img src={logo192} alt="image" />
-          <div className="detail-container">
-            <h2 className="project-title">Project Title 2</h2>
-            <div className="pro-details">
-              <p>This will be the description for the project</p>
-              <div className="pro-btns">
-                <a href="https://github.com/shalladeen/portfolio" target="_blank" rel="noopener noreferrer" className="source-btn">
-                  <FiGithub />
-                </a>
-            </div>
-            </div>
-          </div>
-          </NavLink>
-
-      </div>
-    </div>
+    <Container maxW="container.xl" centerContent> 
+      <SimpleGrid columns={[1, null, 2]} spacing={5} alignItems="center" justifyContent="center">
+        {projects.map((project) => (
+          <Box as="a" href={project.projectUrl} target="_blank"
+            w="400px" h="400px"
+            p={5} boxShadow="lg" rounded="lg" bg="white"
+            transition="all 0.3s ease"
+            _hover={{ transform: "translateY(-5px)", boxShadow: "xl" }}
+            display="flex" flexDirection="column" justifyContent="space-between"
+            position="relative">
+            <VStack align="center" spacing={4} flex="1">
+              <Image src={project.imageUrl} alt={`Project Image ${project.id}`} borderRadius="md" boxSize="250px" objectFit="cover" />
+              <VStack align="start" spacing={1} flexGrow="1">
+                <Heading size="md">{project.title}</Heading>
+                <Text fontSize="sm" align="start">{project.description}</Text>
+              </VStack>
+            </VStack>
+            <IconButton
+              aria-label="Github Link" icon={<FiGithub />} isRound={true} size="lg" position="absolute"
+              bottom={5} right={5} colorScheme="gray" _hover={{ bg: 'gray.600', color: 'white' }}
+              as={Link} href={project.githubUrl} isExternal
+            />
+          </Box>
+        ))}
+      </SimpleGrid>
+    </Container>
   )
 }
 
-export default ProjectCard
+export default ProjectCard;

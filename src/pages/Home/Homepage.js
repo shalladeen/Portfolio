@@ -18,8 +18,9 @@ const Homepage = () => {
       justify="center"
       textAlign="center"
       p={{ base: '4', md: '8' }} 
-      gap="2" // Reduces the gap between items
+      gap="2" 
       minHeight={{ base: 'auto', md: '100vh' }}
+      bg="#fffbf8"
     >
       {/* Greeting Container */}
       <Box

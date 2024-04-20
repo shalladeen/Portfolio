@@ -1,14 +1,15 @@
 import React from 'react';
-import './Contact.css';
+import { Box, Heading, Text } from '@chakra-ui/react';
 
 const Contact = () => {
   return (
-    <div className="contact-body">
-      <div className="contact-heading">
-        <h1>CONTACT</h1>
-        <p>Let's chat</p> 
-        </div>
-    </div>
+    <Box className="contact-body" bg="#fffbf8" p="4"
+    minHeight={{ base: 'auto', md: '50vh' }}>  
+      <Box className="contact-heading" textAlign="center">
+        <Heading as="h1">CONTACT</Heading>
+        <Text fontSize="xl" mt="3">Let's chat</Text> 
+      </Box>
+    </Box>
   );
 };
 
