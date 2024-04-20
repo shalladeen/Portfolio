@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Heading, Text, Link, SimpleGrid, VStack, Icon, IconButton, Container} from '@chakra-ui/react';
+import { Box, Image, Heading, Text, Link, SimpleGrid, VStack, IconButton, Container} from '@chakra-ui/react';
 import { FiGithub } from "react-icons/fi";
 import pixelSnake from './pixel-snake.jpg';
 import logo192 from './logo192.png';
@@ -16,10 +16,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Title 2",
-    description: "This will be the description for the second project",
+    title: "Zephyr Zone",
+    description: "A weather app that uses an API to get local weather and location",
     imageUrl: logo192,
-    githubUrl: "https://github.com/your_github/project2" 
+    githubUrl: "https://github.com/shalladeen/zephyrzone" 
   }
 ];
 
