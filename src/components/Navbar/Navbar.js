@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Flex, Link, IconButton, useColorMode, Text } from '@chakra-ui/react';
+import { Box, Flex, Link, IconButton, useColorMode} from '@chakra-ui/react';
 import { Link as ScrollLink, animateScroll } from 'react-scroll';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
