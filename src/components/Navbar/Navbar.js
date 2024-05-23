@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Box, Flex, Link, IconButton, useColorMode } from '@chakra-ui/react';
-import { Link as ScrollLink, animateScroll } from 'react-scroll'; // Adjusted import
+import React, { useState, useEffect } from 'react';
+import { Box, Flex, Link, IconButton, useColorMode, Text } from '@chakra-ui/react';
+import { Link as ScrollLink, animateScroll } from 'react-scroll';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-
 
 const Navbar = () => {
   const [color, setColor] = useState(false);
@@ -18,6 +17,11 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', changeColor);
+    return () => window.removeEventListener('scroll', changeColor);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     animateScroll.scrollTo(sectionId, {
       smooth: true,
@@ -25,33 +29,47 @@ const Navbar = () => {
     });
   };
 
-  window.addEventListener('scroll', changeColor);
-
   return (
-    <Box className={color ? 'header header-bg' : 'header'} bg={color ? bgColor[colorMode] : 'transparent'} w="100%" p={4} color={textColor[colorMode]} position="fixed" zIndex={1}>
-      <Flex justifyContent="space-between" alignItems="center">
+    <Box
+      className={color ? 'header header-bg' : 'header'}
+      bg={color ? bgColor[colorMode] : 'transparent'}
+      w="100%"
+      p={5}
+      color={textColor[colorMode]}
+      position="fixed"
+      zIndex={1}
+      //boxShadow={color ? 'sm' : 'none'}
+    >
+      <Flex justifyContent="space-between" alignItems="center" height="70px">
         <Box>
-          
           <ScrollLink to="home" smooth={true} onClick={() => scrollToSection('home')}>
-            <Link px={2}>Home</Link>
+            <Link px={4} fontSize="lg">
+              Home
+            </Link>
           </ScrollLink>
           <ScrollLink to="projects-section" smooth={true} onClick={() => scrollToSection('projects-section')}>
-            <Link px={2}>Projects</Link>
+            <Link px={4} fontSize="lg">
+              Projects
+            </Link>
           </ScrollLink>
           <ScrollLink to="about-section" smooth={true} onClick={() => scrollToSection('about-section')}>
-            <Link px={2}>About</Link>
+            <Link px={4} fontSize="lg">
+              About
+            </Link>
           </ScrollLink>
           <ScrollLink to="contact-section" smooth={true} onClick={() => scrollToSection('contact-section')}>
-            <Link px={2}>Contact</Link>
+            <Link px={4} fontSize="lg">
+              Contact
+            </Link>
           </ScrollLink>
         </Box>
 
         <Box>
           <Link href="https://www.linkedin.com/in/shawna-halladeen-6414a8288/" isExternal>
-            <IconButton icon={<FaLinkedin />} isRound={true} size="lg" mx={1} />
+            <IconButton icon={<FaLinkedin />} isRound={true} size="lg" mx={2} />
           </Link>
           <Link href="https://github.com/shalladeen" isExternal>
-            <IconButton icon={<FaGithub />} isRound={true} size="lg" mx={1} />
+            <IconButton icon={<FaGithub />} isRound={true} size="lg" mx={2} />
           </Link>
         </Box>
       </Flex>

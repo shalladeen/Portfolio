@@ -1,17 +1,31 @@
-import React from 'react'
-import ProjectPage from './ProjectPage';
+import React from 'react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import './Projects.css'
 
 const Projects = () => {
   return (
-    <div className="project-body">
-        <ProjectPage heading="PROJECTS." text="Some of my recent stuff"/>
-        <div className="project-cards-container">
-          <ProjectCard/>
-          </div>
-    </div>
-  )
-}
+    <Flex
+      direction="column"
+      justify="center"
+      align="center"
+      textAlign="center"
+      bg="white"
+      p={4}
+      minHeight="90vh"
+    >
+      <Box pb={4} maxW="800px">
+        <Heading as="h1" size="2xl" mb={4}>
+          PROJECTS
+        </Heading>
+        <Text fontSize="lg" mb={6} color="gray.600">
+          Some of my recent stuff
+        </Text>
+      </Box>
+      <Flex wrap="wrap" justifyContent="center">
+        <ProjectCard />
+      </Flex>
+    </Flex>
+  );
+};
 
-export default Projects
+export default Projects;
