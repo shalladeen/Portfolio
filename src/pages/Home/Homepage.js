@@ -28,6 +28,7 @@ const Homepage = () => {
         p={{ base: '4', md: '8' }}
         minWidth="300px"
         marginRight={{ md: '4' }}
+        
       >
         <Text fontSize={{ base: '4xl', md: '5xl' }} fontWeight="bold">
           Hi there, I'm Shawna!
@@ -58,7 +59,7 @@ const Homepage = () => {
         sx={{
           clipPath: 'circle(70%)',
         }}
-        maxW={{ base: '80%', md: '40%' }}
+        maxW={{ base: '80%', md: '40%', lg: '60%' }}
         mt={{ base: '8', md: '0' }}
       >
         <MePortfolio style={{ width: '100%', height: 'auto' }} />
