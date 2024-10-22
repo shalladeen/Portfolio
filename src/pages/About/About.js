@@ -17,7 +17,7 @@ const About = () => {
           ABOUT
         </Heading>
         <Text fontSize="lg" mb={2} color="gray.600">
-          I'm Shawna Halladeen, a Software Engineering student at Centennial College with a background in Practical Nursing. My journey from healthcare to tech has equipped me with a unique problem-solving mindset and diverse skill set.
+          I'm Shawna Halladeen, a second year Software Engineering student with a background in Practical Nursing. My journey from healthcare to tech has equipped me with a unique problem-solving mindset and diverse skill set.
         </Text>
         <Text fontSize="lg" mb={2} color="gray.600">
           I thrive at the intersection of technology and creativity, developing solutions with React and Node.js. Passionate about continuous learning and collaboration, I aim to create impactful projects that make a difference.
