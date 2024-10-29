@@ -30,7 +30,7 @@ const Homepage = () => {
         marginRight={{ md: '4' }}
         
       >
-        <Text fontSize={{ base: '4xl', md: '5xl' }} fontWeight="bold">
+        <Text fontSize={{ base: '4xl', md: '5xl' }} fontWeight="bold" color="black">
           Hi there, I'm Shawna!
         </Text>
         <Text fontSize={{ base: 'xl', md: '2xl' }} my="4" color="gray.600">

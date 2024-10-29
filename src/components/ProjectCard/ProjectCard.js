@@ -3,8 +3,8 @@ import { Box, Image, Heading, Text, Link, SimpleGrid, VStack, IconButton, Contai
 import { FiGithub } from "react-icons/fi";
 import pixelSnake from './pixel-snake.jpg';
 import logo from './Logo.PNG';
+import pomo from './pomo.webp';
 
-// Project data array
 const projects = [
   {
     id: 1,
@@ -27,7 +27,7 @@ const projects = [
     title: "Pomo",
     description: "A simple pomodoro timer built with React",
     projectUrl: "https://www.pomoclock.ca",
-    imageUrl: "",
+    imageUrl: pomo,
     githubUrl: "https://github.com/shalladeen/Pomo"
   }
 ];
@@ -38,7 +38,7 @@ const ProjectCard = () => {
       <SimpleGrid 
         columns={{ base: 1, sm: 2, md: 3 }} 
         spacing={10} 
-        alignItems="center" 
+        alignItems="flex-start" 
         justifyContent="center"
       >
         {projects.map((project) => (
@@ -47,7 +47,7 @@ const ProjectCard = () => {
             href={project.projectUrl} 
             target="_blank"
             w={{ base: "90%", md: "400px" }}
-            h="auto"
+            h="400px"
             p={5} 
             boxShadow="lg" 
             rounded="lg" 
@@ -68,9 +68,11 @@ const ProjectCard = () => {
                 boxSize="250px" 
                 objectFit="cover" 
               />
-              <VStack align="start" spacing={1} flexGrow="1">
+              <VStack align="start" spacing={1} flexGrow="1" overflow="hidden">
                 <Heading size="md">{project.title}</Heading>
-                <Text fontSize="sm" align="start" maxWidth="300px" m="1">{project.description}</Text>
+                <Text fontSize="sm" align="start" maxWidth="300px" m="1" noOfLines={2}> {/* Limit the number of lines */}
+                  {project.description}
+                </Text>
               </VStack>
             </VStack>
             <IconButton

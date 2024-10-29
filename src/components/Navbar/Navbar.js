@@ -6,6 +6,8 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 const Navbar = () => {
   const [color, setColor] = useState(false);
   const { colorMode } = useColorMode();
+  
+  // Define colors for light and dark modes
   const bgColor = { light: 'white', dark: 'gray.800' };
   const textColor = { light: 'black', dark: 'white' };
 
@@ -35,7 +37,7 @@ const Navbar = () => {
       bg={color ? bgColor[colorMode] : 'transparent'}
       w="100%"
       p={5}
-      color={textColor[colorMode]}
+      color={color ? textColor[colorMode] : textColor.light} // Use light text color when transparent
       position="fixed"
       zIndex={1}
       boxShadow={color ? 'md' : 'none'}
