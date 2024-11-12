@@ -24,7 +24,7 @@ const About = () => {
         </Text>
 
         {/* Skills Section */}
-        <Box mt={6}>
+        <Box mt={8}>
           <Text fontSize="lg" fontWeight="bold" mb={2} color="gray.700">
             Skills & Technologies
           </Text>
